@@ -52,7 +52,7 @@ def infer_from_ast(ast, ignore_constants=True, config=Config()):
     return rv
 
 
-def infer(template, jinja2_env=None, config=Config()):
+def infer(template, config=Config(), jinja2_env=None):
     """Returns a :class:`.model.Dictionary` which reflects a structure of the context required by ``template``.
 
     :param template: a template
