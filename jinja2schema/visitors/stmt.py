@@ -199,7 +199,7 @@ def visit_block(ast, macroses=None, config=default_config):
 
 @visits_stmt(nodes.CallBlock)
 def visit_callblock(ast, macroses=None, config=default_config):
-    return visit_many(ast.call.args, macroses, config)
+    return visit_many(ast.body, macroses, config)
 
 @visits_stmt(nodes.Include)
 def visit_include(ast, macroses=None, config=default_config, child_blocks=None):
